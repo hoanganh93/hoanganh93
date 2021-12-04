@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js"></script>
+    <style>
+        * {
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body {
+            background-color: #f0f2f5;
+            width: 80%;
+            margin: auto
+        }
+        .form-container {
+            background-color: white;
+            margin: 20px 0 20px;
+            padding: 20px 0px 20px 300px;
+        }
+        .row {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+        }
+        .form-input {
+            margin: 5px 400px 5px 10px;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin: 40px 0 40px;
+        }
+        table {
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+            margin: 20px 0 20px 0;
+        }
+        th, td {
+            height: 30px;
+            width: auto;
+        }
+        h2 {
+            background-color: rgb(252, 252, 252);
+            text-align: center;
+            width: 50%;
+            margin-left: 290px;
+            margin-top: 10px;
+        }
+        button {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>Class Marksheet</h2>
+    <!-- Form input-->
+    <div class="form-container">
+        <form action="" class="form"></form>
+        <div class="row">
+            <label for="name">Họ tên:</label>
+            <input type="text" value="" name="hoten" id="name" class="form-input" autofocus></input>
+        </div>
+        <div class="row">
+            <label>Điểm toán:
+            <input type="text" value="" name="math" id="math" class="form-input">
+        </div>
+        <div class="row">
+            <label>Điểm lý:</label>
+        </label>
+            <input type="text" value="" name="physic" id="physic" class="form-input">
+        </div>
+        <div class="row">
+            <label>Điểm hóa:</label>
+            <input type="text" value="" name="chemist" id="chemist" class="form-input">
+        </div>
+    </div>
+    <button type="button" onclick=" createUser()" style="margin-left: 510px; height: 25px;" title="Bấm vào đây để nhập điểm số">Nhập</button>
+    <!-- Bảng điểm -->
+    <table id="myTable">
+        <tr>
+            <th style="width: 10%;">STT</th>
+            <th style="width: 30%;">Họ tên</th>
+            <th style="width: 15%;">Toán</th>
+            <th style="width: 15%;">Lý</th>
+            <th style="width: 15%;">Hóa</th>
+            <th style="width: 15%;">Trung bình</th>
+        </tr>
+    </table>
+    <button type="button" style="margin: 0 20px 0 390px; height: 25px;" onclick="average()">Tính điểm trung bình</button>
+    <button type="button" style="height: 25px;" onclick="rank()">Xác định học sinh giỏi</button>
+</body>
+</html>
